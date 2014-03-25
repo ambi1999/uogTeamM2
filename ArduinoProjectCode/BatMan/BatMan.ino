@@ -1,7 +1,3 @@
-//Author: Ibharim, Am
-//Date: 11 March 2014
-//Purpose: This code is piano code.
-
 // Feedback by ambI;
 // Add comments, author, purpose of each line
 //write some fubctions
@@ -42,10 +38,15 @@ void setup()
   pinMode(button_A, INPUT);
   pinMode(button_B, INPUT);
 
+  pinMode(0,OUTPUT);
+  pinMode (8,OUTPUT);
+  pinMode (9,OUTPUT);
+  pinMode (10,OUTPUT);
+  pinMode (11,OUTPUT);
+  pinMode (12,OUTPUT);
 
-  pinMode(speaker, OUTPUT);
+pinMode(speaker, OUTPUT);
 }
-
 void loop()
 {
 	buttonstate_C = digitalRead(button_C); // connecting the buttons to the digital read.
@@ -71,6 +72,12 @@ if((buttonstate_C == HIGH) || (buttonstate_E == HIGH) ||  // using IF statment t
 		if (buttonstate_C == HIGH)  // If a button is pressed the note will play.
  		{
 			Cur_tone = tones[0];
+
+                        digitalWrite(0,HIGH); 
+                        
+                        delay (1000);
+                        
+                        digitalWrite(0,LOW);
 		} 
 		if (buttonstate_E == HIGH)
 		{
@@ -103,7 +110,8 @@ if((buttonstate_C == HIGH) || (buttonstate_E == HIGH) ||  // using IF statment t
 	else 
 	{
 		digitalWrite(speaker, LOW); // if a button is not pressed speaker won't make a sound
-	}
+              	
+}
 
 }
 
@@ -115,3 +123,8 @@ void speakerrun(){
 		delayMicroseconds(Cur_tone);
 
 }
+
+
+
+
+  
