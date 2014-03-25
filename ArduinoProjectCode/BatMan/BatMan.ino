@@ -2,6 +2,12 @@
 //Date: 11 March 2014
 //Purpose: This code is piano code.
 
+// Feedback by ambI;
+// Add comments, author, purpose of each line
+//write some fubctions
+
+
+
 int button_C = 1; // declaring the pins 
 int button_D = 2;
 int button_E = 3;
@@ -51,7 +57,13 @@ void loop()
 	buttonstate_B = digitalRead(button_B);
 	
 
-	if((buttonstate_C == HIGH) || (buttonstate_E == HIGH) ||  // using IF statment to make a function
+	processuserInput();
+
+}
+
+//this fucntipon does abcccccccccc
+void processuserInput(){
+if((buttonstate_C == HIGH) || (buttonstate_E == HIGH) ||  // using IF statment to make a function
 		(buttonstate_G == HIGH) || (buttonstate_D == HIGH) || 
 		(buttonstate_F == HIGH) || (buttonstate_A == HIGH) || 
 		(buttonstate_B == HIGH)  )
@@ -84,16 +96,22 @@ void loop()
 		{
 			Cur_tone = tones[6];
 		}
-	
 
-		digitalWrite(speaker, HIGH); 
-		delayMicroseconds(Cur_tone);
-		digitalWrite(speaker, LOW);
-		delayMicroseconds(Cur_tone);
-	}
+          speakerrun();
+
+  }
 	else 
 	{
 		digitalWrite(speaker, LOW); // if a button is not pressed speaker won't make a sound
 	}
+
+}
+
+//this fucntipon does abcccccccccc
+void speakerrun(){
+                digitalWrite(speaker, HIGH); 
+		delayMicroseconds(Cur_tone);
+		digitalWrite(speaker, LOW);
+		delayMicroseconds(Cur_tone);
 
 }
