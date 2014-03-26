@@ -1,0 +1,130 @@
+import glos.IO;
+
+import java.io.BufferedReader;
+import java.io.OutputStream;
+import java.util.Date;
+import java.util.Properties;
+import java.util.Scanner;
+
+import javax.mail.Message;
+import javax.mail.Session;
+import javax.mail.Transport;
+import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeMessage;
+
+public class SendEmail {
+
+	static BufferedReader input;
+
+	static OutputStream output;
+
+	static String from = "s1306996@glos.ac.uk";
+	static String password = "mter4545";
+	static String[] to = { "s1306996@glos.ac.uk" }; // list of recipient email
+	// addresses
+	static String host = "";
+	static String portformail = "";
+
+	private static void sendFromGMail(String host, String port, String from,
+			String pass, String[] to, String subject, String body) {
+		Properties props = System.getProperties();
+		props.put("mail.smtp.host", host);
+		props.put("mail.smtp.port", port);
+		props.put("mail.smtp.auth", "true");
+		props.put("mail.smtp.socketFactory.class",
+				"javax.net.ssl.SSLSocketFactory");
+
+		Session session = Session.getDefaultInstance(props);
+		MimeMessage message = new MimeMessage(session);
+
+		try {
+			message.setFrom(new InternetAddress(from));
+			InternetAddress[] toAddress = new InternetAddress[to.length];
+
+			// To get the array of addresses
+			for (int i = 0; i < to.length; i++) {
+				toAddress[i] = new InternetAddress(to[i]);
+			}
+
+			for (int i = 0; i < toAddress.length; i++) {
+				message.addRecipient(Message.RecipientType.TO, toAddress[i]);
+			}
+
+			message.setSubject(Learn to play Piano);
+			message.setText(Learn to play piano by ibra-dan industries
+
+One your ibra-dan industries piano you will have a series of buttons that you will have to learn in order to get the most out of you piano experience, the system comes with seven individual buttons that all represent the following keys from left to right:
+•	C
+•	D
+•	E
+•	F
+•	G
+•	A
+•	B
+These keys all have the following values:
+The system also comes with a piezo electric speak to allow all the system users to achieve an authentic piano experience with actual piano sounds playing whenever the corresponding key is pushed. The piano also comes with a series of L.E.D lights that move along with the pitch of the notes being played……
+Now that you now the system lets see what it can do:
+(--before attending one of the following songs you should get to know the locations of the keys and the sounds they make--)
+Song List:
+1.	Mary had a little lamb
+2.	Old MacDonald  
+3.	Twinkle Twinkle Little Star
+4.	Itsy-bitsy spider
+
+Song 1, Mary Had a little lamb
+E, D, C, E, E, E, 
+D, D, D, E,E, E 
+E, D, C, D, E, E, E
+E, D, D, E , D, 
+Song 2, Old MacDonald
+C, C, C, G, A, A, G, E, E, D, D, C,
+G, C, C, G, A, A, G, E, E, D, D, C,
+G, G, C, C, C, G, G, C, C, C,
+C, C, C, C, C, C, C, C,
+C, C, C, G, A, A, G, E, E, D, D, C
+
+Song 3, Twinkle Twinkle Little Star
+E, E, B, B, C, C, B
+A, A, G, G, F, F, E,
+B, B, A, A, G, G, F,
+B, B, A, A, G, G, F,
+E, E, B, B, C, C, B
+A, A, G, G, F, F, E
+
+Song 4, itsy-bitsy spider
+G, C, C, C, D, E, E
+E, D, C, D, E, C
+E, E, F, G,
+G, F, E, F, G, E
+C, C, D, E
+E, D, C, D, E, C
+G, G, C, C, C, D, E, E
+E, D, C, D, E, C
+);
+			Transport transport = session.getTransport("smtp");
+			transport.connect(host, from, pass);
+			transport.sendMessage(message, message.getAllRecipients());
+			transport.close();
+			System.out.println("Email sent successfully");
+
+		} catch (Exception ex) {
+			ex.printStackTrace();
+		}
+
+	}
+
+	public static void main(String[] args) throws Exception {
+
+		from = IO.readString("Enter User Name");
+		password = IO.readString("Enter Password");
+		host = IO
+				.readString("Enter host, For gmail enter smtp.gmail.com, For yahoo enter smtp.mail.yahoo.com");
+		portformail = IO
+				.readString("Enter port for mail. Enter 465. If this does not work then try 587");
+
+		String subject = "TEST =" + "EMAIL ";
+		String body = "KEEP CALM AND START PROGRAMMING" + new Date().getTime();
+		sendFromGMail(host, portformail, from, password, to, subject, body);
+
+	}
+}
