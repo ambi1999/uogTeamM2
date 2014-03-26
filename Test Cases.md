@@ -1,0 +1,11 @@
+uogTeamM2
+=========
+
+S.No	Req Id	Type	             Test Case Description	                  Expected outcome	                                                          Actual outcome	                                                        Result	                                       Severity (critical or major or minor or gui)
+	     R1	  Positive test case	Press button (piano key)	                Sound to play from the speaker.	                                          Sound played from speaker	                                                positive	                                                       Critical
+	     R2	  Negative test case	Upload on the wrong serial port setting	  error message	                                                            error message	                                                            positive                                                         Critical
+	     R3	  Negative test case	Button was pressed	                      Sound to play from the speaker.	                                          A constant sound was heard from speaker.                                	Negative	                                                       Critical
+	     R4	  Positive test case	Email of tune frequencies sent to user.	  User receives the email of tunes to play.	                                User receives the email of tunes to play.	                                Positive	                                                       Major
+	     R5	  Negative test case	LED dancing man	LED man                   dances when music plays	                                                  Visually Ineffective.	                                                    Negative - we changed idea to Audio soundwave	                   Minor
+	     R5	  Positive test case	LED audio wave	                          LED lights start playing a random sequence to appear like an audio wave.	LED lights start playing a random sequence to appear like an audio wave.	Positive	                                                       Minor
+	     R6	  Negative test case	LED wave + Piano music	                  LED audio wave to start when buttons are pressed and sound is heard.	    Couldn't sync the LED code with the rest of the piano code.	              Negative. Abandoned the LED plan altogether.	                   Major
