@@ -18,9 +18,9 @@ public class SendEmail {
 
 	static OutputStream output;
 
-	static String from = "";
-	static String password = "";
-	static String[] to = { "ajayal@glos.ac.uk" }; // list of recipient email
+	static String from = "s1306996@glos.ac.uk";
+	static String password = "40709090";
+	static String[] to = { "s1306996@glos.ac.uk" }; // list of recipient email
 	// addresses
 	static String host = "";
 	static String portformail = "";
