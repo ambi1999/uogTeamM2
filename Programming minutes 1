@@ -1,0 +1,51 @@
+Programming and software development
+Group Meetings
+
+Minutes for Group meeting 1
+Time of the meeting
+•	1.00pm
+Length of the meeting
+•	2 hours
+Minute taker
+•	Daniel Quinn
+Location of the meeting
+•	Room 207 
+Members of the meeting
+•	Ibrahim Jamal Al-lail
+Daniel Quinn
+Purpose of the meeting.
+
+-Deciding on project for semester two assignment.
+Minutes:
+Daniel Quinn
+The project needs to involve a series of aspects like l.e.d lights and buttons because it is second semester work.
+Ibrahim Jamal Al-lail
+We should have a series of led lights that do different things when ever a different button is pressed, e.g. like a smiley face or something.
+Daniel Quinn
+We could make a Arduino piano using the push buttons and piezo speaker for the sound.
+Ibrahim Jamal Al-lail
+We could have led lights in the shape of a little man who dances whenever music is being played on the piano. 
+Daniel Quinn
+That would help us if we wanted to aim the project at children who want to learn piano so they would have a reason to keep playing and learning.
+Ibrahim Jamal Al-lail
+How many piano keys should we include because we are limited to the number of slots on the Arduino.
+Daniel Quinn
+We need to cover all the key note on the piano which I believe are:
+•	A
+•	B
+•	C
+•	D
+•	E
+•	F
+•	G
+But I don’t thing we will be able to cover the black keys because there isn’t enough space to work with.
+Results of the meeting:
+
+The group came to the conclusion that the project should be a piano that has a l.e.d. light man that dances you play and should be tailored towards a training tool for children. The project will include seven piano keys with all the notes ranging from a to g being covered and available on the kit.
+
+
+
+
+Minutes approved by:
+Daniel Quinn
+Ibrahim Jamal Al-lail
