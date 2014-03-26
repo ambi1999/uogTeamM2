@@ -19,16 +19,22 @@ Purpose of the meeting.
 Minutes:
 Daniel Quinn
 The project needs to involve a series of aspects like l.e.d lights and buttons because it is second semester work.
+
 Ibrahim Jamal Al-lail
 We should have a series of led lights that do different things when ever a different button is pressed, e.g. like a smiley face or something.
+
 Daniel Quinn
 We could make a Arduino piano using the push buttons and piezo speaker for the sound.
+
 Ibrahim Jamal Al-lail
 We could have led lights in the shape of a little man who dances whenever music is being played on the piano. 
+
 Daniel Quinn
 That would help us if we wanted to aim the project at children who want to learn piano so they would have a reason to keep playing and learning.
+
 Ibrahim Jamal Al-lail
 How many piano keys should we include because we are limited to the number of slots on the Arduino.
+
 Daniel Quinn
 We need to cover all the key note on the piano which I believe are:
 •	A
@@ -38,6 +44,7 @@ We need to cover all the key note on the piano which I believe are:
 •	E
 •	F
 •	G
+
 But I don’t thing we will be able to cover the black keys because there isn’t enough space to work with.
 Results of the meeting:
 
